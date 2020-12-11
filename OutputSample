@@ -1,0 +1,196 @@
+{
+    "data": [
+        {
+            "author_id": "2244994945",
+            "context_annotations": [
+                {
+                    "domain": {
+                        "description": "Categories within Brand Verticals that narrow down the scope of Brands",
+                        "id": "46",
+                        "name": "Brand Category"
+                    },
+                    "entity": {
+                        "id": "781974596752842752",
+                        "name": "Services"
+                    }
+                },
+                {
+                    "domain": {
+                        "description": "Brands and Companies",
+                        "id": "47",
+                        "name": "Brand"
+                    },
+                    "entity": {
+                        "id": "10045225402",
+                        "name": "Twitter"
+                    }
+                },
+                {
+                    "domain": {
+                        "description": "Top level interests and hobbies groupings, like Food or Travel",
+                        "id": "65",
+                        "name": "Interests and Hobbies Vertical"
+                    },
+                    "entity": {
+                        "description": "Technology and computing",
+                        "id": "848920371311001600",
+                        "name": "Technology"
+                    }
+                },
+                {
+                    "domain": {
+                        "description": "A grouping of interests and hobbies entities, like Novelty Food or Destinations",
+                        "id": "66",
+                        "name": "Interests and Hobbies Category"
+                    },
+                    "entity": {
+                        "description": "Computer programming",
+                        "id": "848921413196984320",
+                        "name": "Computer programming"
+                    }
+                }
+            ],
+            "created_at": "2020-07-02T17:48:57.000Z",
+            "entities": {
+                "annotations": [
+                    {
+                        "end": 29,
+                        "normalized_text": "Twitter",
+                        "probability": 0.4636,
+                        "start": 23,
+                        "type": "Organization"
+                    }
+                ],
+                "hashtags": [
+                    {
+                        "end": 117,
+                        "start": 106,
+                        "tag": "TwitterAPI"
+                    }
+                ],
+                "urls": [
+                    {
+                        "description": "Labs has been invaluable in helping us understand what works well and what doesn\u2019t, what you liked and what you didn\u2019t.",
+                        "display_url": "blog.twitter.com/developer/en_u\u2026",
+                        "end": 211,
+                        "expanded_url": "https://blog.twitter.com/developer/en_us/topics/tools/2020/a-year-with-twitter-developer-labs.html",
+                        "images": [
+                            {
+                                "height": 627,
+                                "url": "https://pbs.twimg.com/news_img/1293603689098289152/8EZIdsCA?format=jpg&name=orig",
+                                "width": 1200
+                            },
+                            {
+                                "height": 150,
+                                "url": "https://pbs.twimg.com/news_img/1293603689098289152/8EZIdsCA?format=jpg&name=150x150",
+                                "width": 150
+                            }
+                        ],
+                        "start": 188,
+                        "status": 200,
+                        "title": "A year with Twitter Developer Labs: What we've learned and changed",
+                        "unwound_url": "https://blog.twitter.com/developer/en_us/topics/tools/2020/a-year-with-twitter-developer-labs.html",
+                        "url": "https://t.co/WvjuEWCa6G"
+                    }
+                ]
+            },
+            "id": "1278747501642657792",
+            "lang": "en",
+            "possibly_sensitive": false,
+            "public_metrics": {
+                "like_count": 191,
+                "quote_count": 28,
+                "reply_count": 17,
+                "retweet_count": 74
+            },
+            "source": "Twitter Web App",
+            "text": "It's been a year since Twitter's Developer Labs launched.\n\nAs we build towards the next generation of the #TwitterAPI (coming VERY soon), see what we've learned and changed along the way. https://t.co/WvjuEWCa6G"
+        },
+        {
+            "author_id": "2244994945",
+            "context_annotations": [
+                {
+                    "domain": {
+                        "description": "Ongoing News Stories like 'Brexit'",
+                        "id": "123",
+                        "name": "Ongoing News Story"
+                    },
+                    "entity": {
+                        "id": "1220701888179359745",
+                        "name": "COVID-19"
+                    }
+                },
+                {
+                    "domain": {
+                        "description": "Categories within Brand Verticals that narrow down the scope of Brands",
+                        "id": "46",
+                        "name": "Brand Category"
+                    },
+                    "entity": {
+                        "id": "781974596752842752",
+                        "name": "Services"
+                    }
+                },
+                {
+                    "domain": {
+                        "description": "Brands and Companies",
+                        "id": "47",
+                        "name": "Brand"
+                    },
+                    "entity": {
+                        "id": "10045225402",
+                        "name": "Twitter"
+                    }
+                }
+            ],
+            "created_at": "2020-04-29T17:01:38.000Z",
+            "entities": {
+                "annotations": [
+                    {
+                        "end": 60,
+                        "normalized_text": "Twitter",
+                        "probability": 0.6094,
+                        "start": 54,
+                        "type": "Product"
+                    }
+                ],
+                "urls": [
+                    {
+                        "description": "To further support our company\u2019s ongoing efforts, we want to enable developers and researchers to study the public conversation on COVID-19 in real-time.",
+                        "display_url": "blog.twitter.com/developer/en_u\u2026",
+                        "end": 287,
+                        "expanded_url": "https://blog.twitter.com/developer/en_us/topics/tools/2020/covid19_public_conversation_data.html",
+                        "images": [
+                            {
+                                "height": 627,
+                                "url": "https://pbs.twimg.com/news_img/1324738711465152513/mXkMHohT?format=jpg&name=orig",
+                                "width": 1200
+                            },
+                            {
+                                "height": 150,
+                                "url": "https://pbs.twimg.com/news_img/1324738711465152513/mXkMHohT?format=jpg&name=150x150",
+                                "width": 150
+                            }
+                        ],
+                        "start": 264,
+                        "status": 200,
+                        "title": "Enabling study of the public conversation in a time of crisis",
+                        "unwound_url": "https://blog.twitter.com/developer/en_us/topics/tools/2020/covid19_public_conversation_data.html",
+                        "url": "https://t.co/BPqMcQzhId"
+                    }
+                ]
+            },
+            "id": "1255542774432063488",
+            "lang": "en",
+            "possibly_sensitive": false,
+            "public_metrics": {
+                "like_count": 732,
+                "quote_count": 118,
+                "reply_count": 325,
+                "retweet_count": 319
+            },
+            "source": "Twitter Web App",
+            "text": "During these unprecedented times, what\u2019s happening on Twitter can help the world better understand &amp; respond to the pandemic. \n\nWe're launching a free COVID-19 stream endpoint so qualified devs &amp; researchers can study the public conversation in real-time. https://t.co/BPqMcQzhId"
+        }
+    ]
+}
