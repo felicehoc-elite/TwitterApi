@@ -2,12 +2,13 @@ import requests
 import os
 import api_credentials
 
-tweet_fields = "tweet.fields=attachments,author_id,context_annotations,created_at,entities,geo,id,in_reply_to_user_id,lang," \
-               "possibly_sensitive,public_metrics,referenced_tweets,source,text,withheld"
 
 # source code forked from the twitter's official documentation
 # with some additional changes
 # Link to the source code : https://github.com/twitterdev/Twitter-API-v2-sample-code
+
+tweet_fields = "tweet.fields=attachments,author_id,context_annotations,created_at,entities,geo,id,in_reply_to_user_id,lang," \
+               "possibly_sensitive,public_metrics,referenced_tweets,source,text,withheld"
 
 class TweetLookupHelper:
     @staticmethod
