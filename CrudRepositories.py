@@ -96,8 +96,8 @@ class ContextAnnotationRepository(DBManager.MySqlDBManager):
     def insert(self, context_annotation: ContextAnnotation):
         self.connect()
         cursor = self.connection.cursor()
-        sql = "INSERT INTO ContextAnnotation (context_annotation_id, domain_id, context_entity_id)" \
+        sql = "INSERT INTO ContextAnnotation (tweet_id, domain_id, context_entity_id)" \
               "VALUES (%s, %s, %s)"
-        val = ( context_annotation.context_annotation_id,  context_annotation.domain_id, context_annotation.context_entity_id)
+        val = ( context_annotation.tweet_id,  context_annotation.domain_id, context_annotation.context_entity_id)
         cursor.execute(sql, val)
         self.close()

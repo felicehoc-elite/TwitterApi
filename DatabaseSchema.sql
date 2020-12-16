@@ -58,9 +58,10 @@ CREATE TABLE IF NOT EXISTS ContextEntity (
     description VARCHAR(1000)
 );
 CREATE TABLE IF NOT EXISTS ContextAnnotation(
-    context_annotation_id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    tweet_id INT(6),
     domain_id INT(6),
     context_entity_id INT(6),
+    CONSTRAINT tweetFK FOREIGN KEY (tweet_id) REFERENCES Tweet(tweet_id),
     CONSTRAINT domainFK FOREIGN KEY (domain_id) REFERENCES domain(domain_id),
     CONSTRAINT contextEntityFK FOREIGN KEY (context_entity_id) REFERENCES ContextEntity(context_entity_id)
 );

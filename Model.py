@@ -72,7 +72,7 @@ class ContextEntity:
 
 
 class ContextAnnotation:
-    def __init__(self, context_annotation_id, domain_id, context_entity_id) -> None:
-        self.context_annotation_id = context_annotation_id
+    def __init__(self, tweet_id, domain_id, context_entity_id) -> None:
+        self.tweet_id = tweet_id
         self.domain_id = domain_id
         self.context_entity_id = context_entity_id
