@@ -35,7 +35,7 @@ CREATE TABLE IF NOT EXISTS Image(
     url_id   INT(6),
     CONSTRAINT urlFK FOREIGN KEY (url_id) REFERENCES Url(url_id)
 );
-CREATE TABLE IF NOT EXISTS Annotation (
+CREATE TABLE IF NOT EXISTS Entity (
     tweet_id INT(6),
     annotation_id INT(6),
     hashtag_id INT(6),
