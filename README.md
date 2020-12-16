@@ -16,9 +16,7 @@
 
  
 
-Rapport de Projet : 
-
-Extraction, analyse et structuration de Tweets 
+Rapport de Projet : Extraction, analyse et structuration de Tweets 
 
  
 
