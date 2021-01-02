@@ -14,6 +14,12 @@ class TweetRepository(DBManager.MySqlDBManager):
         cursor.execute(sql, val)
         self.close()
 
+    def fetch_all(self)->list:
+        self.connect()
+        cursor = self.connection.cursor()
+        cursor.execute("SELECT * FROM Tweet")
+        return cursor.fetchall()
+
 
 class AnnotationRepository(DBManager.MySqlDBManager):
     def insert(self, annotation: Annotation):
@@ -24,6 +30,12 @@ class AnnotationRepository(DBManager.MySqlDBManager):
         val = (annotation.annotation_id, annotation.normalized_text, annotation.probability)
         cursor.execute(sql, val)
         self.close()
+
+    def fetch_all(self)->list:
+        self.connect()
+        cursor = self.connection.cursor()
+        cursor.execute("SELECT * FROM Annotation")
+        return cursor.fetchall()
 
 
 class HashtagRepository(DBManager.MySqlDBManager):
@@ -36,6 +48,12 @@ class HashtagRepository(DBManager.MySqlDBManager):
         cursor.execute(sql, val)
         self.close()
 
+    def fetch_all(self)->list:
+        self.connect()
+        cursor = self.connection.cursor()
+        cursor.execute("SELECT * FROM Hashtag")
+        return cursor.fetchall()
+
 
 class UrlRepository(DBManager.MySqlDBManager):
     def insert(self, url: Url):
@@ -46,6 +64,12 @@ class UrlRepository(DBManager.MySqlDBManager):
         val = (url.url_id, url.description, url.expanded_url,url.status, url.title, url.unwound_url)
         cursor.execute(sql, val)
         self.close()
+
+    def fetch_all(self)->list:
+        self.connect()
+        cursor = self.connection.cursor()
+        cursor.execute("SELECT * FROM Url")
+        return cursor.fetchall()
 
 
 class ImageRepository(DBManager.MySqlDBManager):
@@ -58,6 +82,11 @@ class ImageRepository(DBManager.MySqlDBManager):
         cursor.execute(sql, val)
         self.close()
 
+    def fetch_all(self)->list:
+        self.connect()
+        cursor = self.connection.cursor()
+        cursor.execute("SELECT * FROM Image")
+        return cursor.fetchall()
 
 class EntityRepository(DBManager.MySqlDBManager):
     def insert(self, entity: Entity):
@@ -68,6 +97,12 @@ class EntityRepository(DBManager.MySqlDBManager):
         val = (entity.tweet_id, entity.annotation_id, entity.hashtag_id, entity.url_id, entity.end, entity.start)
         cursor.execute(sql, val)
         self.close()
+
+    def fetch_all(self)->list:
+        self.connect()
+        cursor = self.connection.cursor()
+        cursor.execute("SELECT * FROM Entity")
+        return cursor.fetchall()
 
 
 class DomainRepository(DBManager.MySqlDBManager):
@@ -80,6 +115,12 @@ class DomainRepository(DBManager.MySqlDBManager):
         cursor.execute(sql, val)
         self.close()
 
+    def fetch_all(self)->list:
+        self.connect()
+        cursor = self.connection.cursor()
+        cursor.execute("SELECT * FROM Domain")
+        return cursor.fetchall()
+
 
 class ContextEntityRepository(DBManager.MySqlDBManager):
     def insert(self, context_entity: ContextEntity):
@@ -91,6 +132,12 @@ class ContextEntityRepository(DBManager.MySqlDBManager):
         cursor.execute(sql, val)
         self.close()
 
+    def fetch_all(self)->list:
+        self.connect()
+        cursor = self.connection.cursor()
+        cursor.execute("SELECT * FROM ContextEntity")
+        return cursor.fetchall()
+
 
 class ContextAnnotationRepository(DBManager.MySqlDBManager):
     def insert(self, context_annotation: ContextAnnotation):
@@ -101,3 +148,9 @@ class ContextAnnotationRepository(DBManager.MySqlDBManager):
         val = ( context_annotation.tweet_id,  context_annotation.domain_id, context_annotation.context_entity_id)
         cursor.execute(sql, val)
         self.close()
+
+    def fetch_all(self)->list:
+        self.connect()
+        cursor = self.connection.cursor()
+        cursor.execute("SELECT * FROM ContextAnnotation")
+        return cursor.fetchall()
