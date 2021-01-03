@@ -18,7 +18,7 @@ class TweetRepository(DBManager.MySqlDBManager):
         self.connect()
         cursor = self.connection.cursor()
         cursor.execute("SELECT * FROM Tweet")
-        return cursor.fetchall()
+        return list(cursor.fetchall())
 
 
 class AnnotationRepository(DBManager.MySqlDBManager):
@@ -35,7 +35,7 @@ class AnnotationRepository(DBManager.MySqlDBManager):
         self.connect()
         cursor = self.connection.cursor()
         cursor.execute("SELECT * FROM Annotation")
-        return cursor.fetchall()
+        return list(cursor.fetchall())
 
 
 class HashtagRepository(DBManager.MySqlDBManager):
@@ -52,7 +52,7 @@ class HashtagRepository(DBManager.MySqlDBManager):
         self.connect()
         cursor = self.connection.cursor()
         cursor.execute("SELECT * FROM Hashtag")
-        return cursor.fetchall()
+        return list(cursor.fetchall())
 
 
 class UrlRepository(DBManager.MySqlDBManager):
@@ -69,7 +69,7 @@ class UrlRepository(DBManager.MySqlDBManager):
         self.connect()
         cursor = self.connection.cursor()
         cursor.execute("SELECT * FROM Url")
-        return cursor.fetchall()
+        return list(cursor.fetchall())
 
 
 class ImageRepository(DBManager.MySqlDBManager):
@@ -86,7 +86,7 @@ class ImageRepository(DBManager.MySqlDBManager):
         self.connect()
         cursor = self.connection.cursor()
         cursor.execute("SELECT * FROM Image")
-        return cursor.fetchall()
+        return list(cursor.fetchall())
 
 class EntityRepository(DBManager.MySqlDBManager):
     def insert(self, entity: Entity):
@@ -102,7 +102,7 @@ class EntityRepository(DBManager.MySqlDBManager):
         self.connect()
         cursor = self.connection.cursor()
         cursor.execute("SELECT * FROM Entity")
-        return cursor.fetchall()
+        return list(cursor.fetchall())
 
 
 class DomainRepository(DBManager.MySqlDBManager):
@@ -119,7 +119,7 @@ class DomainRepository(DBManager.MySqlDBManager):
         self.connect()
         cursor = self.connection.cursor()
         cursor.execute("SELECT * FROM Domain")
-        return cursor.fetchall()
+        return list(cursor.fetchall())
 
 
 class ContextEntityRepository(DBManager.MySqlDBManager):
@@ -136,7 +136,7 @@ class ContextEntityRepository(DBManager.MySqlDBManager):
         self.connect()
         cursor = self.connection.cursor()
         cursor.execute("SELECT * FROM ContextEntity")
-        return cursor.fetchall()
+        return list(cursor.fetchall())
 
 
 class ContextAnnotationRepository(DBManager.MySqlDBManager):
@@ -153,4 +153,4 @@ class ContextAnnotationRepository(DBManager.MySqlDBManager):
         self.connect()
         cursor = self.connection.cursor()
         cursor.execute("SELECT * FROM ContextAnnotation")
-        return cursor.fetchall()
+        return list(cursor.fetchall())
