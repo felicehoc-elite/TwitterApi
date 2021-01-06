@@ -1,6 +1,6 @@
 CREATE TABLE IF NOT EXISTS Tweet (
     tweet_id BIGINT PRIMARY KEY,
-    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+    created_at VARCHAR(30),
     lang VARCHAR(30) NOT NULL,
     possibly_sensitive BOOLEAN,
     source VARCHAR(200),
