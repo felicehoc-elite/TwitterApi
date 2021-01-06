@@ -1,5 +1,5 @@
 CREATE TABLE IF NOT EXISTS Tweet (
-    tweet_id INT(15) PRIMARY KEY,
+    tweet_id BIGINT PRIMARY KEY,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
     lang VARCHAR(30) NOT NULL,
     possibly_sensitive BOOLEAN,
@@ -48,12 +48,12 @@ CREATE TABLE IF NOT EXISTS Entity (
     CONSTRAINT urlFK FOREIGN KEY (url_id) REFERENCES Url(url_id)
 );
 CREATE TABLE IF NOT EXISTS domain (
-    domain_id INT(15) PRIMARY KEY,
+    domain_id BIGINT PRIMARY KEY,
     name VARCHAR(200),
     description VARCHAR(1000)
 );
 CREATE TABLE IF NOT EXISTS ContextEntity (
-    context_entity_id INT(15) PRIMARY KEY,
+    context_entity_id BIGINT PRIMARY KEY,
     name VARCHAR(200),
     description VARCHAR(1000)
 );
