@@ -12,7 +12,9 @@ class TweetRepository(DBManager.MySqlDBManager):
         val = (tweet.tweet_id,tweet.created_at, tweet.lang, tweet.possibly_sensitive, tweet.source,
                tweet.text, tweet.like_count, tweet.quote_count, tweet.reply_count, tweet.retweet_count)
         cursor.execute(sql, val)
+        id = cursor.lastrowid
         self.close()
+        return id
 
     def fetch_all(self)->list:
         self.connect()
@@ -29,7 +31,9 @@ class AnnotationRepository(DBManager.MySqlDBManager):
               "VALUES (%s, %s, %s)"
         val = (annotation.annotation_id, annotation.normalized_text, annotation.probability)
         cursor.execute(sql, val)
+        id = cursor.lastrowid
         self.close()
+        return id
 
     def fetch_all(self)->list:
         self.connect()
@@ -46,7 +50,9 @@ class HashtagRepository(DBManager.MySqlDBManager):
               "VALUES (%s, %s)"
         val = (hashtag.hashtag_id,hashtag.tag)
         cursor.execute(sql, val)
+        id = cursor.lastrowid
         self.close()
+        return id
 
     def fetch_all(self)->list:
         self.connect()
@@ -63,7 +69,9 @@ class UrlRepository(DBManager.MySqlDBManager):
               "VALUES (%s, %s, %s, %s, %s, %s)"
         val = (url.url_id, url.description, url.expanded_url,url.status, url.title, url.unwound_url)
         cursor.execute(sql, val)
+        id = cursor.lastrowid
         self.close()
+        return id
 
     def fetch_all(self)->list:
         self.connect()
@@ -80,7 +88,9 @@ class ImageRepository(DBManager.MySqlDBManager):
               "VALUES (%s, %s, %s, %s, %s)"
         val = (image.image_id, image.url, image.height, image.width, image.url_id)
         cursor.execute(sql, val)
+        id = cursor.lastrowid
         self.close()
+        return id
 
     def fetch_all(self)->list:
         self.connect()
